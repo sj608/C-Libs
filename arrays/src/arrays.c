@@ -81,3 +81,33 @@ void reverse_arr(ArrayC *arr)
         arr->array[arr->size-i-1] = temp;
     }
 }
+
+int r_shift_arr(ArrayC *arr, int shift_val)
+{
+    if(shift_val>=0 && shift_val<arr->size){
+        for(int i=arr->size-1; i>=0; i--){
+            if(i-shift_val>=0){
+                arr->array[i] = arr->array[i-shift_val];
+            }else{
+                arr->array[i] = 0;
+            }
+        }
+        return SUCCESS;
+    }
+    return INVALID_POS;
+}
+
+int l_shift_arr(ArrayC *arr, int shift_val)
+{
+    if(shift_val>=0 && shift_val<arr->size){
+        for(int i=0; i<arr->size; i++){
+            if(i+shift_val<arr->size){
+                arr->array[i] = arr->array[i+shift_val];
+            }else{
+                arr->array[i] = 0;
+            }
+        }
+        return SUCCESS;
+    }
+    return INVALID_POS;
+}

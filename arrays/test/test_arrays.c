@@ -123,9 +123,43 @@ void test_reverse_arr(void)
         printf("%d, ", array->array[i]);
     }
     printf("\n");
-
 }
 
+void test_r_shift_arr(void)
+{
+    ArrayC *array;
+    int size = 10;
+    array = get_array_c(size);
+    for(int i = 0; i<size; i++){
+        array->array[i] = i;
+        TEST_ASSERT_EQUAL(i, array->array[i]);
+        printf("%d, ", array->array[i]);
+    }
+    printf("\n");
+    TEST_ASSERT_EQUAL(1, r_shift_arr(array, 10));
+    TEST_ASSERT_EQUAL(0, r_shift_arr(array, 6));
+    for(int i = 0; i<size; i++){
+        printf("%d, ", array->array[i]);
+    }
+}
+
+void test_l_shift_arr(void)
+{
+    ArrayC *array;
+    int size = 10;
+    array = get_array_c(size);
+    for(int i = 0; i<size; i++){
+        array->array[i] = i;
+        TEST_ASSERT_EQUAL(i, array->array[i]);
+        printf("%d, ", array->array[i]);
+    }
+    printf("\n");
+    TEST_ASSERT_EQUAL(1, l_shift_arr(array, 10));
+    TEST_ASSERT_EQUAL(0, l_shift_arr(array, 2));
+    for(int i = 0; i<size; i++){
+        printf("%d, ", array->array[i]);
+    }
+}
 
 
 #endif // TEST
