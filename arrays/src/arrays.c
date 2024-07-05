@@ -1,6 +1,5 @@
 #include "arrays.h"
 
-
 ArrayC *get_array_c(int size)
 {
     ArrayC *arr = (ArrayC*)malloc(sizeof(ArrayC));
@@ -111,3 +110,27 @@ int l_shift_arr(ArrayC *arr, int shift_val)
     }
     return INVALID_POS;
 }
+
+#ifdef TEST
+
+void print_array(ArrayC *arr)
+{
+    printf("Array Print \n");
+    for(int i=0; i<arr->size; i++){
+        printf("%d, ", arr->array[i]);
+    }
+    printf("\n");
+}
+
+void srand_array(ArrayC *arr)
+{
+    srand(time(NULL) * arr->size);
+    int i;
+    int total = arr->size * 100;
+    for (i = 0; i < total; i++)
+    {
+        switch_position(arr, rand() % arr->size, rand() % arr->size);
+    }
+}
+
+#endif

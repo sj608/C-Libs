@@ -4,6 +4,11 @@
 #include <stdint.h>
 #include <stdlib.h>
 
+#ifdef TEST
+#include <stdio.h>
+#include <time.h>
+#endif 
+
 #define SUCCESS 0
 #define INVALID_POS 1
 #define INIT_POS 2
@@ -26,5 +31,12 @@ int switch_position(ArrayC *arr, int position1, int position2);
 void reverse_arr(ArrayC *arr);
 int r_shift_arr(ArrayC *arr, int shift_val);
 int l_shift_arr(ArrayC *arr, int shift_val);
+
+#ifdef TEST
+
+void print_array(ArrayC *arr);
+void srand_array(ArrayC *arr);
+
+#endif
 
 #endif // ARRAYS_H

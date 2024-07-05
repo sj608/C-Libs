@@ -161,5 +161,18 @@ void test_l_shift_arr(void)
     }
 }
 
+void test_srand_array(void)
+{
+    ArrayC *array;
+    int size = 100;
+    array = get_array_c(size);
+    for(int i = 0; i<size; i++){
+        array->array[i] = i;
+        TEST_ASSERT_EQUAL(i, array->array[i]);
+    }
+    print_array(array);
+    srand_array(array);
+    print_array(array);
+}
 
 #endif // TEST
