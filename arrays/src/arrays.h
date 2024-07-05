@@ -22,4 +22,9 @@ int insert_value(ArrayC *arr, int position, int value);
 int update_value(ArrayC *arr, int position, int value);
 int remove_value(ArrayC *arr, int position);
 
+int switch_position(ArrayC *arr, int position1, int position2);
+void reverse_arr(ArrayC *arr);
+int r_shift_arr(ArrayC *arr, int shift_val);
+int l_shift_arr(ArrayC *arr, int shift_val);
+
 #endif // ARRAYS_H

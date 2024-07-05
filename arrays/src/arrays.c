@@ -59,3 +59,25 @@ int remove_value(ArrayC *arr, int position)
     }
     return INVALID_POS;
 }
+
+int switch_position(ArrayC *arr, int position1, int position2)
+{
+    int temp;
+    if(position1>=0 && position1<arr->size && position2>=0 && position2<arr->size){
+        temp = arr->array[position1];
+        arr->array[position1] = arr->array[position2];
+        arr->array[position2] = temp;
+        return SUCCESS;
+    }
+    return INVALID_POS;
+}
+
+void reverse_arr(ArrayC *arr)
+{
+    int temp;
+    for(int i = 0; i<arr->size/2; i++){
+        temp = arr->array[i];
+        arr->array[i] = arr->array[arr->size-i-1];
+        arr->array[arr->size-i-1] = temp;
+    }
+}
