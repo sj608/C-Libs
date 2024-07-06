@@ -170,9 +170,37 @@ void test_srand_array(void)
         array->array[i] = i;
         TEST_ASSERT_EQUAL(i, array->array[i]);
     }
-    print_array(array);
+    srand_array(array);
+}
+
+void test_find_max_arr(void)
+{
+    ArrayC *array;
+    int size = 100;
+    array = get_array_c(size);
+    for(int i = 0; i<size; i++){
+        array->array[i] = i;
+        TEST_ASSERT_EQUAL(i, array->array[i]);
+    }
+    TEST_ASSERT_EQUAL(99, find_max_arr(array));
     srand_array(array);
     print_array(array);
+    TEST_ASSERT_EQUAL(99, array->array[find_max_arr(array)]);
+}
+
+void test_find_min_arr(void)
+{
+    ArrayC *array;
+    int size = 100;
+    array = get_array_c(size);
+    for(int i = 0; i<size; i++){
+        array->array[i] = i;
+        TEST_ASSERT_EQUAL(i, array->array[i]);
+    }
+    TEST_ASSERT_EQUAL(0, find_min_arr(array));
+    srand_array(array);
+    print_array(array);
+    TEST_ASSERT_EQUAL(0, array->array[find_min_arr(array)]);
 }
 
 #endif // TEST

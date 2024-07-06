@@ -133,6 +133,26 @@ void srand_array(ArrayC *arr)
     }
 }
 
+int find_max_arr(ArrayC *arr)
+{
+    int max_indx = 0;
+    for(int i=0; i<arr->size; i++){
+        if(arr->array[i]>arr->array[max_indx]){
+            max_indx = i;
+        }
+    }
+    return max_indx;
+}
 
+int find_min_arr(ArrayC *arr)
+{
+    int min_indx = 0;
+    for(int i=0; i<arr->size; i++){
+        if(arr->array[i]<arr->array[min_indx]){
+            min_indx = i;
+        }
+    }
+    return min_indx;
+}
 
 #endif
