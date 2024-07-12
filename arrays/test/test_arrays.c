@@ -164,13 +164,14 @@ void test_l_shift_arr(void)
 void test_srand_array(void)
 {
     ArrayC *array;
-    int size = 100;
+    int size = 256;
     array = get_array_c(size);
     for(int i = 0; i<size; i++){
         array->array[i] = i;
         TEST_ASSERT_EQUAL(i, array->array[i]);
     }
     srand_array(array);
+    print_array(array);
 }
 
 void test_find_max_arr(void)
