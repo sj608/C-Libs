@@ -31,6 +31,8 @@ int switch_position(ArrayC *arr, int position1, int position2);
 void reverse_arr(ArrayC *arr);
 int r_shift_arr(ArrayC *arr, int shift_val);
 int l_shift_arr(ArrayC *arr, int shift_val);
+int find_max_arr(ArrayC *arr);
+int find_min_arr(ArrayC *arr);
 
 #ifdef TEST
 
