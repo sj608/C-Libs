@@ -1,4 +1,6 @@
-.vscode/*
-arrays/build/*
-queue/build/*
-queue/.vscode/*
+.vscode/**
+arrays/build/**
+queue/build/**
+queue/.vscode/**
+
+singlyLinkedList/build/**
