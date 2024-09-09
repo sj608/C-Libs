@@ -16,9 +16,7 @@ typedef struct Person{
 
 
 
-
-Person* add_person(Person* person, char* name, int age);
-void delet_person(Person* person);
+void delete_person(char* person);
 unsigned int hash_func(char* name);
 int insert_person(char* name, int age);
 void init_people_table(void);

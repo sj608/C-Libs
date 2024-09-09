@@ -3,5 +3,7 @@
 arrays/build/**
 queue/build/**
 queue/.vscode/**
+
 hashTable/build/**
+hashTable/.vscode/**
 singlyLinkedList/build/**

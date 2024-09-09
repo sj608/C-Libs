@@ -25,6 +25,15 @@ int insert_person(char* _name, int _age)
     return 0;
 }
 
+void delete_person(char* _name)
+{
+    unsigned int indx = hash_func(_name);
+    if(people[indx] != NULL && (strncmp(_name, people[indx]->name, PERSON_NAME_MAX) == 0)){
+        free(people[indx]);
+        people[indx] = NULL;
+    }
+}
+
 void init_people_table(void)
 {
     for(int i = 0; i<MAX_PEOPLE; i++){
@@ -34,9 +43,11 @@ void init_people_table(void)
 
 void display_table(void)
 {
+    printf("Start\n");
     for(int i = 0; i<MAX_PEOPLE; i++){
         if(people[i]!=NULL){
             printf("Name: %s, age: %d, insdex: %d\n", people[i]->name, people[i]->age, i);
         }
     }    
+    printf("End\n\n");
 }

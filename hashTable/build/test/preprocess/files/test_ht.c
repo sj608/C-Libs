@@ -40,6 +40,30 @@ void test_ht_hash_func(void)
 
 
 
+void test_delete_person(void)
+
+{
+
+    init_people_table();
+
+    insert_person("Jacob", 25);
+
+    insert_person("Steven", 31);
+
+    insert_person("Jay", 44);
+
+
+
+    display_table();
+
+    delete_person("Jacob");
+
+    display_table();
+
+}
+
+
+
 void test_display_table(void)
 
 {
@@ -52,6 +76,6 @@ void test_display_table(void)
 
     insert_person("Jay", 44);
 
-    display_table();
+
 
 }

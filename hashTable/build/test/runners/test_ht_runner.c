@@ -11,6 +11,7 @@ char* GlobalOrderError;
 extern void setUp(void);
 extern void tearDown(void);
 extern void test_ht_hash_func(void);
+extern void test_delete_person(void);
 extern void test_display_table(void);
 
 
@@ -77,7 +78,8 @@ int main(void)
 {
   UnityBegin("test_ht.c");
   run_test(test_ht_hash_func, "test_ht_hash_func", 15);
-  run_test(test_display_table, "test_display_table", 23);
+  run_test(test_delete_person, "test_delete_person", 23);
+  run_test(test_display_table, "test_display_table", 35);
 
   return UnityEnd();
 }
