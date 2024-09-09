@@ -1,6 +1,7 @@
+.DS_Store
 .vscode/**
 arrays/build/**
 queue/build/**
 queue/.vscode/**
-
+hashTable/build/**
 singlyLinkedList/build/**
